@@ -1,0 +1,1033 @@
+/* =========================================================
+   NHAA SINGLE APP — LANDING PAGE
+   ========================================================= */
+
+.nhaa-app {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #172033;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nhaa-app * {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.nhaa-app button,
+.nhaa-app a,
+.nhaa-app input,
+.nhaa-app textarea,
+.nhaa-app select {
+  font: inherit;
+}
+
+.nhaa-app button {
+  border: 0;
+}
+
+.nhaa-app a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nhaa-app img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.nhaa-app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 8%,
+      rgba(19, 83, 150, 0.08),
+      transparent 28%),
+    #f7f9fc;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  width: 100%;
+  height: 88px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-nhaa-logo {
+  width: 105px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #172033;
+}
+
+.header-title p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #56657a;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-ministry-logo {
+  width: 125px;
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =========================
+   HEADER RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .site-header {
+    height: 76px;
+    padding: 0 18px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .header-nhaa-logo {
+    width: 78px;
+  }
+
+  .header-title h1 {
+    font-size: 18px;
+  }
+
+  .header-title p {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  .header-ministry-logo {
+    width: 90px;
+    max-height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    height: 70px;
+    padding: 0 12px;
+  }
+
+  .header-left {
+    gap: 8px;
+  }
+
+  .header-nhaa-logo {
+    width: 65px;
+  }
+
+  .header-title h1 {
+    font-size: 15px;
+  }
+
+  .header-title p {
+    font-size: 10px;
+  }
+
+  .header-ministry-logo {
+    width: 75px;
+    max-height: 38px;
+  }
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.nhaa-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg,
+      #f5f9ff 0%,
+      #ffffff 48%,
+      #eef5fc 100%);
+  border-bottom: 1px solid #e4eaf2;
+}
+
+.nhaa-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  top: -190px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(25, 94, 164, 0.11) 0%,
+      rgba(25, 94, 164, 0) 70%);
+
+  pointer-events: none;
+}
+
+.nhaa-hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -170px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle,
+      rgba(28, 113, 171, 0.07) 0%,
+      rgba(28, 113, 171, 0) 70%);
+
+  pointer-events: none;
+}
+
+.nhaa-hero-inner {
+  position: relative;
+  z-index: 1;
+
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 88px 0 94px;
+}
+
+.nhaa-hero-badge {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #d9e5f2;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  color: #245a8d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  box-shadow:
+    0 5px 18px rgba(32, 66, 105, 0.05);
+}
+
+.nhaa-status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #2c9a62;
+
+  box-shadow:
+    0 0 0 4px rgba(44, 154, 98, 0.12);
+}
+
+.nhaa-eyebrow {
+  margin: 30px 0 12px;
+
+  color: #2b659a;
+
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.nhaa-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #132a43;
+
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 0.98;
+
+  font-weight: 800;
+  letter-spacing: -0.055em;
+}
+
+.nhaa-hero h1 span {
+  color: #1767a8;
+}
+
+.nhaa-hero-copy {
+  max-width: 700px;
+
+  margin: 26px 0 0;
+
+  color: #5c6879;
+
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.nhaa-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+
+  margin-top: 34px;
+}
+
+.nhaa-primary-button,
+.nhaa-secondary-button {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 20px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.nhaa-primary-button {
+  color: #ffffff;
+  background: #155f99;
+
+  box-shadow:
+    0 9px 22px rgba(21, 95, 153, 0.19);
+}
+
+.nhaa-primary-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 28px rgba(21, 95, 153, 0.25);
+}
+
+.nhaa-secondary-button {
+  color: #1b527f;
+
+  background: #ffffff;
+
+  border: 1px solid #d6e1ec;
+}
+
+.nhaa-secondary-button:hover {
+  transform: translateY(-2px);
+
+  background: #f7fbff;
+
+  box-shadow:
+    0 8px 20px rgba(31, 66, 104, 0.08);
+}
+
+.nhaa-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 24px;
+
+  color: #778294;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACCESS SECTION
+   ========================================================= */
+
+.nhaa-access-section {
+  background: #ffffff;
+}
+
+.nhaa-section-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 82px 0;
+}
+
+.nhaa-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 430px);
+  align-items: end;
+  gap: 50px;
+
+  margin-bottom: 34px;
+}
+
+.nhaa-section-kicker {
+  margin: 0 0 9px;
+
+  color: #2a6b9f;
+
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.nhaa-section-heading h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #172d46;
+
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.12;
+
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.nhaa-section-heading>p {
+  margin: 0;
+
+  color: #697486;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.nhaa-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nhaa-access-card {
+  position: relative;
+
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 27px;
+
+  text-align: left;
+
+  border: 1px solid #dfe6ee;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(29, 53, 79, 0.045);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.nhaa-access-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b9d0e4;
+
+  background:
+    linear-gradient(180deg,
+      #ffffff 0%,
+      #f8fbfe 100%);
+
+  box-shadow:
+    0 17px 34px rgba(29, 53, 79, 0.09);
+}
+
+.nhaa-access-card:focus-visible {
+  outline: 3px solid rgba(28, 103, 165, 0.22);
+  outline-offset: 3px;
+}
+
+.nhaa-card-icon {
+  width: 50px;
+  height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #1b659f;
+
+  background: #edf6fd;
+
+  border: 1px solid #dcecf8;
+}
+
+.nhaa-card-body {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 22px;
+}
+
+.nhaa-card-title {
+  color: #18334f;
+
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.nhaa-card-copy {
+  max-width: 290px;
+
+  margin-top: 9px;
+
+  color: #697586;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.nhaa-card-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+
+  width: 35px;
+  height: 35px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #276a9c;
+
+  background: #f2f7fb;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.nhaa-access-card:hover .nhaa-card-arrow {
+  transform: translateX(3px);
+
+  background: #e7f2fa;
+}
+
+
+/* =========================================================
+   TRUST SECTION
+   ========================================================= */
+
+.nhaa-trust-section {
+  padding: 0 0 82px;
+
+  background: #ffffff;
+}
+
+.nhaa-trust-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px;
+
+  padding: 28px 30px;
+
+  border: 1px solid #dce6ef;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(120deg,
+      #f6faff,
+      #ffffff);
+}
+
+.nhaa-trust-icon {
+  width: 52px;
+  height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: #17629a;
+
+  background: #eaf5fc;
+}
+
+.nhaa-trust-inner h2 {
+  margin: 0;
+
+  color: #18344f;
+
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.nhaa-trust-inner p {
+  max-width: 720px;
+
+  margin: 6px 0 0;
+
+  color: #697586;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.nhaa-trust-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  white-space: nowrap;
+
+  color: #1b649b;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.nhaa-footer {
+  color: #b9c7d5;
+
+  background: #10283e;
+}
+
+.nhaa-footer-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  min-height: 125px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 1fr;
+  align-items: center;
+
+  gap: 40px;
+}
+
+.nhaa-footer-inner>div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nhaa-footer-inner strong {
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.nhaa-footer-inner span,
+.nhaa-footer-ministry {
+  color: #aebdcb;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.nhaa-footer-contact {
+  text-align: center;
+  align-items: center;
+}
+
+.nhaa-footer-contact a {
+  color: #ffffff;
+
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.nhaa-footer-ministry {
+  text-align: right;
+}
+
+.nhaa-footer-bottom {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #8fa2b5;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LEGACY LOADING
+   ========================================================= */
+
+.nhaa-legacy-loading {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  z-index: 100;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(16, 40, 62, 0.94);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+.nhaa-legacy-loading span {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: nhaa-spin 0.8s linear infinite;
+}
+
+@keyframes nhaa-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   LEGACY WARNING
+   ========================================================= */
+
+.nhaa-legacy-warning {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 200;
+
+  max-width: 680px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #ead7a6;
+  border-radius: 10px;
+
+  background: #fff9e9;
+
+  color: #765c21;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  box-shadow:
+    0 10px 30px rgba(42, 49, 60, 0.12);
+}
+
+.nhaa-legacy-warning span {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .nhaa-header-inner,
+  .nhaa-hero-inner,
+  .nhaa-section-inner,
+  .nhaa-trust-inner,
+  .nhaa-footer-inner,
+  .nhaa-footer-bottom {
+    width: min(100% - 36px, 720px);
+  }
+
+  .nhaa-header-inner {
+    min-height: 76px;
+  }
+
+  .nhaa-header-note {
+    display: none;
+  }
+
+  .nhaa-hero-inner {
+    padding: 70px 0 76px;
+  }
+
+  .nhaa-section-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .nhaa-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nhaa-access-card {
+    min-height: 190px;
+  }
+
+  .nhaa-trust-inner {
+    grid-template-columns: auto 1fr;
+  }
+
+  .nhaa-trust-link {
+    grid-column: 2;
+  }
+
+  .nhaa-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 28px 0;
+  }
+
+  .nhaa-footer-ministry {
+    text-align: left;
+  }
+
+  .nhaa-footer-bottom {
+    padding: 13px 0;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .nhaa-header-inner,
+  .nhaa-hero-inner,
+  .nhaa-section-inner,
+  .nhaa-trust-inner,
+  .nhaa-footer-inner,
+  .nhaa-footer-bottom {
+    width: calc(100% - 28px);
+  }
+
+  .nhaa-header-inner {
+    min-height: 70px;
+    gap: 12px;
+  }
+
+  .nhaa-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .nhaa-brand-copy strong {
+    font-size: 15px;
+  }
+
+  .nhaa-brand-copy span {
+    max-width: 185px;
+    font-size: 10px;
+  }
+
+  .ministry-logo {
+    width: 52px;
+    height: 42px;
+  }
+
+  .nhaa-hero-inner {
+    padding: 56px 0 62px;
+  }
+
+  .nhaa-eyebrow {
+    margin-top: 25px;
+    font-size: 11px;
+  }
+
+  .nhaa-hero h1 {
+    font-size: clamp(42px, 14vw, 60px);
+  }
+
+  .nhaa-hero-copy {
+    margin-top: 21px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .nhaa-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nhaa-primary-button,
+  .nhaa-secondary-button {
+    width: 100%;
+  }
+
+  .nhaa-section-inner {
+    padding: 62px 0;
+  }
+
+  .nhaa-section-heading h2 {
+    font-size: 30px;
+  }
+
+  .nhaa-access-card {
+    min-height: 205px;
+    padding: 23px;
+  }
+
+  .nhaa-trust-section {
+    padding-bottom: 62px;
+  }
+
+  .nhaa-trust-inner {
+    grid-template-columns: 1fr;
+    padding: 23px;
+  }
+
+  .nhaa-trust-link {
+    grid-column: auto;
+  }
+
+  .nhaa-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 0;
+  }
+
+  .nhaa-footer-contact {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nhaa-footer-ministry {
+    text-align: left;
+  }
+
+  .nhaa-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 0;
+  }
+
+  .nhaa-legacy-warning {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+}

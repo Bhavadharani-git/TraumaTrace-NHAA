@@ -1,0 +1,197 @@
+import forms from "@tailwindcss/forms";
+import containerQueries from "@tailwindcss/container-queries";
+
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+
+  theme: {
+  extend: {
+    colors: {
+      // Existing single-app colors
+      govNavy: "#0A2540",
+      govBlue: "#1a56db",
+      govHeaderBlue: "#2563eb",
+      govCrimson: "#b91c1c",
+      govCrimsonDark: "#991b1b",
+      govGold: "#d97706",
+      govGreen: "#15803d",
+      govPurple: "#6366f1",
+
+      // Admin Portal colors
+      surface: "#f7f9fb",
+      "surface-dim": "#d8dadc",
+      "surface-bright": "#f7f9fb",
+      "surface-container-lowest": "#ffffff",
+      "surface-container-low": "#f2f4f6",
+      "surface-container": "#eceef0",
+      "surface-container-high": "#e6e8ea",
+      "surface-container-highest": "#e0e3e5",
+      "on-surface": "#0f172a",
+      "on-surface-variant": "#44474d",
+      "inverse-surface": "#2d3133",
+      "inverse-on-surface": "#eff1f3",
+      outline: "#75777e",
+      "outline-variant": "#cbd5e1",
+
+      primary: "#0f2038",
+      "primary-dark": "#000818",
+      "on-primary": "#ffffff",
+      "primary-container": "#0f2038",
+      "on-primary-container": "#b7c7e7",
+
+      secondary: "#1e40af",
+      "secondary-hover": "#1e3a8a",
+      "on-secondary": "#ffffff",
+      "secondary-container": "#dde1ff",
+      "on-secondary-container": "#00217a",
+
+      tertiary: "#0d9488",
+      "on-tertiary": "#ffffff",
+      "tertiary-container": "#ccfbf1",
+      "on-tertiary-container": "#115e59",
+
+      error: "#dc2626",
+      "on-error": "#ffffff",
+      "error-container": "#fee2e2",
+      "on-error-container": "#991b1b",
+
+      warning: "#d97706",
+      "warning-container": "#fef3c7",
+      "on-warning-container": "#92400e",
+
+      success: "#15803d",
+      "success-container": "#dcfce7",
+      "on-success-container": "#166534",
+
+      background: "#f7f9fb",
+      "on-background": "#0f172a",
+    },
+
+    fontFamily: {
+      sans: [
+        "Inter",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "sans-serif",
+      ],
+      admin: ["Public Sans", "system-ui", "sans-serif"],
+    },
+
+    fontSize: {
+      "display-lg": [
+        "32px",
+        {
+          lineHeight: "40px",
+          letterSpacing: "-0.02em",
+          fontWeight: "700",
+        },
+      ],
+
+      "headline-lg": [
+        "24px",
+        {
+          lineHeight: "32px",
+          letterSpacing: "-0.015em",
+          fontWeight: "600",
+        },
+      ],
+
+      "headline-md": [
+        "20px",
+        {
+          lineHeight: "28px",
+          letterSpacing: "-0.01em",
+          fontWeight: "600",
+        },
+      ],
+
+      "headline-sm": [
+        "18px",
+        {
+          lineHeight: "24px",
+          fontWeight: "600",
+        },
+      ],
+
+      "body-lg": [
+        "16px",
+        {
+          lineHeight: "26px",
+          fontWeight: "400",
+        },
+      ],
+
+      "body-md": [
+        "14px",
+        {
+          lineHeight: "22px",
+          fontWeight: "400",
+        },
+      ],
+
+      "label-md": [
+        "13px",
+        {
+          lineHeight: "18px",
+          letterSpacing: "0.01em",
+          fontWeight: "600",
+        },
+      ],
+
+      "label-sm": [
+        "12px",
+        {
+          lineHeight: "16px",
+          letterSpacing: "0.02em",
+          fontWeight: "600",
+        },
+      ],
+
+      "code-sm": [
+        "13px",
+        {
+          lineHeight: "18px",
+          fontWeight: "500",
+        },
+      ],
+    },
+
+    spacing: {
+      "space-2xs": "0.25rem",
+      "space-xs": "0.5rem",
+      "space-sm": "0.75rem",
+      "space-md": "1rem",
+      "space-lg": "1.5rem",
+      "space-xl": "2rem",
+      "space-2xl": "3rem",
+      "space-3xl": "4rem",
+    },
+
+    borderRadius: {
+      sm: "0.125rem",
+      DEFAULT: "0.25rem",
+      md: "0.375rem",
+      lg: "0.5rem",
+      xl: "0.75rem",
+    },
+
+    boxShadow: {
+      level1: "0 1px 3px 0 rgba(15, 23, 42, 0.05)",
+      level2:
+        "0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05)",
+      level3:
+        "0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.05)",
+    },
+  },
+},
+
+  plugins: [
+    forms,
+    containerQueries,
+  ],
+};

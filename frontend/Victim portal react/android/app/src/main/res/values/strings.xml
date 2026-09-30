@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NHAA Victim Portal</string>
+    <string name="title_activity_main">NHAA Victim Portal</string>
+    <string name="package_name">com.nhaa.victimportal</string>
+    <string name="custom_url_scheme">com.nhaa.victimportal</string>
+</resources>
